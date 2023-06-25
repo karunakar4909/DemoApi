@@ -22,6 +22,8 @@ function App() {
             <div key={user.id}>
               <p>
                 <strong>{user.first_name}</strong>
+    
+                <strong>{user.last_name}</strong>
               </p>
               <p>{user.email}</p>
               <img key={user.avatar} src={user.avatar} />
