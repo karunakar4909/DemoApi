@@ -1,5 +1,7 @@
-import * as React from "react";
+// import * as React from "react";
 import "./index.css";
+import React from "react";
+import SuperCounter from "./components/Supercounter/SuperCounter";
 
 function App() {
   const [users, setUsers] = React.useState([]);
@@ -7,7 +9,7 @@ function App() {
    const res = await fetch("https://reqres.in/api/users/");
     const json = await res.json();
     setUsers(json.data);
-    console.log(res);
+    //console.log(res);
   };
   React.useEffect(() => {
     f();
@@ -30,6 +32,9 @@ function App() {
             </div>
           );
         })}
+    </div>
+    <div className="App">
+      <SuperCounter/>
     </div>
   </div>
   );
